@@ -1,0 +1,176 @@
+{
+   "Novels": [
+      {
+         "name": "Book Of Love",
+          "FiveRating": "78",
+          "FourRating": "9",
+          "ThreeRating": "7",
+          "TwoRating": "3",
+          "OneRating": "3",
+          "OverAllRating": "4.5",
+          "Reviews": "104",
+          "ReviewImage": "Germany/words/bookoflovee.png",
+          "Helpfull":"A great story to melt away. You immediately plunge into the story and the author writes wonderful, very atmospheric. The protagonists are credible and the story around believable. Beautiful entertaining novel for rainy afternoons or in between.",
+          "count":"12",
+         "imgPath": "Germany/bookoflove.png"
+          
+          
+           
+      },
+      {
+         "name": "Christmas Kisses in White Cliff Bay",
+          "FiveRating": "78",
+          "FourRating": "16",
+          "ThreeRating": "4",
+          "TwoRating": "0",
+          "OneRating": "2",
+          "OverAllRating": "4.6",
+           "Reviews": "125",
+          "ReviewImage": "Germany/words/christmasword.png",
+          "Helpfull":"The perfect book to read whilst it was snowing outside. Magical and whimsical I loved all the characters oh and I really want a patchwork dog! Lovely and a bit haunting I really enjoyed this book.",
+          "count":"6",
+         "imgPath": "Germany/christmaskissesinwhittecliffbay.png"
+           
+          
+           
+      },
+    
+      {
+         "name": "Cape Town Kisses",
+          "FiveRating": "93",
+          "FourRating": "5",
+          "ThreeRating": "2",
+          "TwoRating": "0",
+          "OneRating": "0",
+          "OverAllRating": "4.9",
+           "Reviews": "58",
+          "ReviewImage": "Germany/words/capetown_word.png",
+          "Helpfull":"I'm afraid there are no words to describe what you feel when reading this book. I think I have never had such a great amount of handkerchiefs, like this book, by Lotte Römer. Unfortunately, I can only award a maximum of 5 stars, although probably this book would earn much more. Thanks to Netgalley and the Amazon Publishing Publishing House for providing the review copy.",
+          "count":"5",
+         "imgPath": "Germany/capetownkisses.png"
+           
+          
+           
+      },
+       {
+         "name": "Dear John",
+          "FiveRating": "61",
+          "FourRating": "19",
+          "ThreeRating": "10",
+          "TwoRating": "5",
+          "OneRating": "5",
+          "OverAllRating": "4.4",
+           "Reviews": "111",
+          "ReviewImage": "Germany/words/dearjohn.png",
+          "Helpfull":"You feel as if you are reading as part of the plot and can feel good with the acting people. Sometimes I just had to shed a teardrop. Very moving is the description of therelationship of John to his father, who learns to understand him later.",
+          "count":"12",
+         "imgPath": "Germany/dearjohn.png"
+           
+          
+           
+      },
+      {
+         "name": "recovered",
+          "FiveRating": "83",
+          "FourRating": "11",
+          "ThreeRating": "4",
+          "TwoRating": "0",
+          "OneRating": "2",
+          "OverAllRating": "4.7",
+           "Reviews": "188",
+          "ReviewImage": "Germany/words/recovered.png",
+          "Helpfull":"As usual, JC delivered! I have been following her since I read “Rule” (all time favorite) and every book she wrote since. I love this author, her stories and characters. I loved thebit of personal history at the beginning of this book. Makes her seem just like one of us and the story so real. Looking forward to the next one.",
+          "count":"7",
+         "imgPath": "Germany/recovered.png"
+           
+          
+           
+      },
+      {
+         "name": "RUM RUNNER",
+          "FiveRating": "65",
+          "FourRating": "16",
+          "ThreeRating": "5",
+          "TwoRating": "7",
+          "OneRating": "7",
+          "OverAllRating": "4.2",
+           "Reviews": "97",
+          "ReviewImage": "Germany/words/rumrunner.png",
+          "Helpfull":"If you are looking for a fun tropical read look no further. Tricia Leedom's Rum Runner does not only transport you to warm sandy beaches, but will surprise you with suspensful twist and turns that will leave you turning pages quickly. This well written light piece of fiction leaves the reader not only with a thoughtful romance but tethers together piece by piecesecrets kept that finally unravel giving it a special depth. Grab yourself a fruity cocktail along with this book and get ready for a true adventure.",
+          "count":"9",
+         "imgPath": "Germany/rumrunner.png"
+           
+          
+           
+      },
+    {
+         "name": "Sweet Surprise",
+          "FiveRating": "72",
+          "FourRating": "13",
+          "ThreeRating": "9",
+          "TwoRating": "1",
+          "OneRating": "5",
+          "OverAllRating": "4.4",
+           "Reviews": "86",
+          "ReviewImage": "Germany/words/swetsurprise.png",
+          "Helpfull":"A beautiful love story that is not only readable in spring. The author manages to draw the reader into the story so that one does not want to put the book down. Kopfkino came with the reading and you can laugh with the characters and cry. You also meet old acquaintances from previous books again. Especially the Italian Violetta has grown to my heart. The flowery descriptions, either literally or figuratively meant, I find very successful and make the book something special. Highly recommended for those who love romantic stories.",
+          "count":"11",
+         "imgPath": "Germany/sweet_surprise.png"
+           
+          
+           
+      },
+       
+      {
+         "name": "The Lucky One",
+          "FiveRating": "58",
+          "FourRating": "19",
+          "ThreeRating": "10",
+          "TwoRating": "5",
+          "OneRating": "8",
+          "OverAllRating": "4.1",
+           "Reviews": "174",
+          "ReviewImage": "Germany/words/theluckyones.png",
+          "Helpfull":"captivating story, great writing, from the first page to the last a story evolves, charcaters are very old, two people are falling slowly in love, both with a big history, lovely.",
+          "count":"11",
+         "imgPath": "Germany/luckyones.png"
+           
+          
+           
+      },
+    {
+         "name": "TRANSCEND",
+          "FiveRating": "93",
+          "FourRating": "6",
+          "ThreeRating": "0",
+          "TwoRating": "0",
+          "OneRating": "1",
+          "OverAllRating": "4.9",
+           "Reviews": "275",
+          "ReviewImage": "Germany/words/transcendword.png",
+          "Helpfull":"I felt so involved with the characters in that it was like they were right there in front of me the entire time I was reading. The best way I can explain how I felt was that it was like I was feeling every emotion Swayze felt, everything she saw every beat of her heart. It is such a powerful story. The characters were so real to me.",
+          "count":"29",
+         "imgPath": "Germany/transcend.png"
+           
+          
+           
+      },
+    
+      {
+         "name": "OUR UNSCRIPTED STORY",
+           "FiveRating": "85",
+          "FourRating": "12",
+          "ThreeRating": "2",
+          "TwoRating": "1",
+          "OneRating": "0",
+          "OverAllRating": "4.8",
+           "Reviews": "152",
+          "ReviewImage": "Germany/words/unscriptedword.png",
+          "Helpfull":"I would 100% recommend this book to all ROMANCE lovers!!! If you love a story that will sweep you off your feet then this is the book to read. Everyone NEEDS to meet Greyson Ratcliffe. He will make your heart flutter and your panties melt ;) I could probably talk all day about this book, but I don’t think my words can do it justice and I don’t want to ruin the experience for any other readers. This is a MUST READ!!!",
+           "count":"34",
+         "imgPath": "Germany/ourunscriptedstory.png"
+         
+           
+      }
+  ]
+}

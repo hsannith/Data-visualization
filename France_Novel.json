@@ -1,0 +1,178 @@
+{
+   "Novels": [
+      {
+         "name": "Photogrpahy for beginners by Edward Bailey",
+          "FiveRating": "57",
+          "FourRating": "22",
+          "ThreeRating": "12",
+          "TwoRating": "5",
+          "OneRating": "4",
+          "OverAllRating": "3.2",
+          "Reviews": "1543",
+          "ReviewImage": "France/beginnerguide_R.png",
+          "Helpfull":"If you're just starting out at more advanced photography than point and click, this very brief guide is a good start at exposure. There is a lot more to exposure than this, to say the least, but if you read this from zero knowledge and practice, practice, practice, you're almost certain to benefit.As with all such books, you'll get a lot more out of it if you pull your camera out while you're reading and experiment at the same time, so you can see exactly what the results look like. Since the book doesn't have any illustrations, this is especially important",
+          "count":"32",
+         "imgPath": "France/beginnerguide.png"
+          
+          
+           
+      },
+      {
+         "name": "Photography for Beginners exposed by Thomas Reed",
+          "FiveRating": "52",
+          "FourRating": "26",
+          "ThreeRating": "12",
+          "TwoRating": "5",
+          "OneRating": "5",
+          "OverAllRating": "4.2",
+           "Reviews": "687",
+          "ReviewImage": "France/beginners_exposed_R.png",
+          "Helpfull":"This book is a very basic guide to photography. It covers the basics of the camera and it's accessories in a simplified manner and offers a few basic tips to get you started taking pictures. Read this one first if you are an absolute beginner. Then advance quickly to the many other books available that are a little more advanced to learn photography.",
+          "count":"16",
+         "imgPath": "France/beginners_exposed.png"
+           
+          
+           
+      },
+    
+      {
+         "name": "The Photographers coach",
+          "FiveRating": "51",
+          "FourRating": "23",
+          "ThreeRating": "14",
+          "TwoRating": "6",
+          "OneRating": "6",
+          "OverAllRating": "4",
+           "Reviews": "735",
+          "ReviewImage": "France/coach_R.png",
+          "Helpfull":"While most books on photography focus on camera controls and technical information, this brief book provides workable exercises to improve the quality of your work. It contains no magic answers, no silver bullets, but rather provides penetrating questions for each photographer to examine for her or himself. Think of it as a self-improvement workbook. I have no doubt that my inspiration, vision and skills will improve as I work through the exercises presented in this book.",
+          "count":"13",
+         "imgPath": "France/coach.png"
+           
+          
+           
+      },
+       {
+         "name": "DSLR photography for beginners by James Clark",
+          "FiveRating": "67",
+          "FourRating": "21",
+          "ThreeRating": "6",
+          "TwoRating": "4",
+          "OneRating": "2",
+          "OverAllRating": "4.1",
+           "Reviews": "155",
+          "ReviewImage": "France/dslrbeginner_R.png",
+          "Helpfull":"Clear, insightful, easy to follow. Contains useful information for the budding photographer to immediately apply. I definitely recommend this easy read. ",
+          "count":"28",
+         "imgPath": "France/dslrbeginner.png"
+           
+          
+           
+      },
+      {
+         "name": "photography exposure by James Carren",
+          "FiveRating": "73",
+          "FourRating": "19",
+          "ThreeRating": "4",
+          "TwoRating": "1",
+          "OneRating": "3",
+          "OverAllRating": "4.6",
+           "Reviews": "2201",
+          "ReviewImage": "France/exposure_R.png",
+          "Helpfull":"If you're just starting out at more advanced photography than point and click, this very brief guide is a good start at exposure. There is a lot more to exposure than this, to say the least, but if you read this from zero knowledge and practice, practice, practice, you're almost certain to benefit.As with all such books, you'll get a lot more out of it if you pull your camera out while you're reading and experiment at the same time, so you can see exactly what the results look like. Since the book doesn't have any illustrations, this is especially important",
+          "count":"7",
+         "imgPath": "France/exposure.png"
+           
+          
+           
+      },
+      {
+         "name": "Photography lighting by James Carren",
+          "FiveRating": "72",
+          "FourRating": "21",
+          "ThreeRating": "4",
+          "TwoRating": "1",
+          "OneRating": "2",
+          "OverAllRating": "4.6",
+           "Reviews": "2250",
+          "ReviewImage": "France/lighting_R.png",
+          "Helpfull":"I found the discussion and tips here useful and fairly easy understand as well as to apply in my own photography efforts. The one thing I would have found even more useful in this book was a diagram of the various lighting setups and then an example or two of the results afterwards. In the meantime, I will have to do these myself for my own lighting notebook.",
+          "count":"45",
+         "imgPath": "France/lighting.png"
+           
+          
+           
+      },
+    {
+         "name": "Photography made Easy by Nicole Kinsley",
+          "FiveRating": "64",
+          "FourRating": "22",
+          "ThreeRating": "9",
+          "TwoRating": "2",
+          "OneRating": "3",
+          "OverAllRating": "4.4",
+           "Reviews": "1424",
+          "ReviewImage": "France/madeEasy_R.png",
+          "Helpfull":"I really love photography! This book serves best for beginners who wants to learn photo capturing. It explains well the step by step guide you all need as a beginner on this. Exactly! This is what I really need. Like me who loves photography yet a little confused if they are doing it correctly. Now, I highly recommend to those who want learn photography, try this book!",
+          "count":"14",
+         "imgPath": "France/madeEasy.png"
+           
+          
+           
+      },
+       
+      {
+          "name": "Photograpghy for Beginners by James Carren",
+          "FiveRating": "37",
+          "FourRating": "30",
+          "ThreeRating": "18",
+          "TwoRating": "9",
+          "OneRating": "6",
+          "OverAllRating": "4",
+           "Reviews": "671",
+          "ReviewImage": "France/photoforbeg_R.png",
+          "Helpfull":"I found the discussion and tips here useful and fairly easy understand as well as to apply in my own photography efforts. The one thing I would have found even more useful in this book was a diagram of the various lighting setups and then an example or two of the results afterwards. In the meantime, I will have to do these myself for my own lighting notebook.",
+          "count":"32",
+         "imgPath": "France/photoforbeg.png"
+           
+          
+           
+      },
+    {
+          "name": "How to shoot people by Aaron chase",
+          "FiveRating": "52",
+          "FourRating": "32",
+          "ThreeRating": "10",
+          "TwoRating": "3",
+          "OneRating": "3",
+          "OverAllRating": "4",
+           "Reviews": "70",
+          "ReviewImage": "France/shootpeople_R.png",
+          "Helpfull":" his book is a very basic guide to photography. It covers the basics of the camera and it's accessories in a simplified manner and offers a few basic tips to get you started taking pictures. Read this one first if you are an absolute beginner. Then advance quickly to the many other books available that are a little more advanced to learn photography.",
+          "count":"32",
+         "imgPath": "France/shootpeople.png"
+           
+           
+          
+           
+      },
+       
+      {
+          "name": "Photograpghy  by Steve Royce",
+          "FiveRating": "37",
+          "FourRating": "30",
+          "ThreeRating": "18",
+          "TwoRating": "9",
+          "OneRating": "6",
+          "OverAllRating": "4",
+           "Reviews": "671",
+          "ReviewImage": "France/steveroyce_R.png",
+          "Helpfull":"This is a really great book for beginners! I knew next to nothing about photography, and this book did a great job at bringing me up to speed. My skills have definitely improved, and it's been a blast learning. Easy to understand and very helpful.",
+          "count":"32",
+         "imgPath": "France/steveroyce.png"
+           
+          
+           
+      }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+   "Novels": [
+      {
+         "name": "numberthestar",
+         "imgPath": "numberthestar.jpg",
+         "review": "good"
+      },
+      {
+         "name": "ongrand",
+         "imgPath": "ongrand.jpg",
+         "review": "bad"
+      },
+      {
+         "name": "qp",
+         "imgPath": "qp.jpg",
+         "review": "very bad"
+      },
+       {
+         "name": "numberthestar",
+         "imgPath": "numberthestar.jpg",
+         "review": "good"
+      },
+      {
+         "name": "ongrand",
+         "imgPath": "ongrand.jpg",
+         "review": "bad"
+      },
+      {
+         "name": "qp",
+         "imgPath": "qp.jpg",
+         "review": "very bad"
+      },
+       {
+         "name": "numberthestar",
+         "imgPath": "numberthestar.jpg",
+         "review": "good"
+      },
+      {
+         "name": "ongrand",
+         "imgPath": "ongrand.jpg",
+         "review": "bad"
+      },
+      {
+         "name": "qp",
+         "imgPath": "qp.jpg",
+         "review": "very bad"
+      },
+       {
+         "name": "qp",
+         "imgPath": "qp.jpg",
+         "review": "very bad"
+      }
+       
+  ]
+}

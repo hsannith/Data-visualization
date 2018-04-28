@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-script-type" content="text/javascript">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Game</title>
+
+<style type="text/css">
+ #game img {
+	   width:130px;
+	   height:130px;
+	   padding: 0px 0px 0px 0px;
+	   margin: 0px 0px 0px 0px;
+/*	   border:1px solid red; */
+	   font-size:3em;
+    }
+div.sample
+    {
+        transition: "all 2s";
+    }
+div.container {
+      display:inline-block;
+    }
+
+.middle {
+  transition: .10s ease;
+  opacity: 0;
+  position: relative;
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  padding: 7px 13px;
+}
+   
+</style>
+
+<script type="text/javascript">
+
+
+var piece, x, y;
+
+function ReorderPuzzle() {
+  piece=new Array();
+
+  piece[piece.length]=new Array("pic00.png","pic01.png","pic02.png","pic03.png","pic04.png");
+  piece[piece.length]=new Array("pic10.png","pic11.png","pic12.png","pic13.png","pic14.png");
+  swop();
+}
+
+/*function check(imgnum) {
+  x=parseInt(imgnum.substring(4,5));				// Retrieves the x co-ordinate of the image from it's ID.
+  y=parseInt(imgnum.substring(3,4));				// Retrieves the y co-ordinate of the image from it's ID.
+// alert(y+':'+x);  // for testing purposes
+  var ylow=(y-1<0)?0:y-1;							// This makes sure that the lower bound of y does not drop below 0.
+  var yhigh=(y+1>3)?0:y+1;							// This makes sure that the upper bound of y does not drop go above 3.
+  var xlow=(x-1<0)?0:x-1;							// This makes sure that the lower bound of x does not drop below 0.
+  var xhigh=(x+1>3)?0:x+1;							// This makes sure that the upper bound of x does not drop go above 3.
+
+  if(document.getElementById(imgnum).src!="blank.jpg") {
+
+if(piece[ylow][x]=="blank.jpg"){piece[ylow][x]=piece[y][x];piece[y][x]="blank.jpg";}		// Checks above y for a blank image and if it finds one a swop is made.
+else if(piece[yhigh][x]=="blank.jpg"){piece[yhigh][x]=piece[y][x];piece[y][x]="blank.jpg";}	// Checks below y for a blank image and if it finds one a swop is made.
+else if(piece[y][xlow]=="blank.jpg"){piece[y][xlow]=piece[y][x];piece[y][x]="blank.jpg";}	// Checks above x for a blank image and if it finds one a swop is made.
+else if(piece[y][xhigh]=="blank.jpg"){piece[y][xhigh]=piece[y][x];piece[y][x]="blank.jpg";}	// Checks below x for a blank image and if it finds one a swop is made.
+else{alert("Invalid move!!!");}					// If there is no blank image around the clicked image then the user is notified.
+  } else{alert("Invalid move!!!");}					// If the user clicks on the blank image then they are notified.
+  swop();
+}*/
+
+function swop() {
+    
+  for(var m=0;m<2;m++) {
+    for(var n=0;n<5;n++) {
+      document.getElementById("pic"+m+n).src="_images/"+piece[m][n];		// Swops all the image sources for the ones in the array.
+      document.getElementById("pic"+m+n).alt=piece[m][n];
+      
+    }
+  }
+}
+
+//function randOrd() { return (Math.round(Math.random())-0.5); }
+
+function RandomizePuzzle() {
+    if(country.value == "USA")
+        {
+        var RndArr = ['14','00','01','02','03','10','11','12','13','04'];       
+        }
+    if(country.value == "Mexico")
+        {
+        var RndArr = ['04','10','11','12','13','14','00','01','02','03'];
+        }
+     if(country.value == "India")
+        {
+        var RndArr = ['02','03','04','10','11','12','13','14','00','01'];
+        }
+    if(country.value == "Japan")
+        {
+        var RndArr = ['12','13','14','00','01','02','10','11','03','04'];
+        }
+    if(country.value == "Canada")
+        {
+        var RndArr = ['13','14','00','10','11','12','01','02','03','04'];
+        }
+    if(country.value == "China")
+        {
+        var RndArr = ['10','11','12','01','02','13','14','00','03','04'];
+        }
+    if(country.value == "Singapore")
+        {
+        var RndArr = ['10','01','02','03','04','11','12','13','14','00'];
+        }
+    if(country.value == "Australia")
+        {
+        var RndArr = ['00','01','02','03','10','11','12','13','14','04'];
+        }
+    if(country.value == "Russia")
+        {
+        var RndArr = ['10','14','00','01','02','03','04','11','12','13'];
+        }
+    if(country.value == "Germany")
+        {
+        var RndArr = ['13','14','00','02','03','04','10','11','12','01'];
+        }
+
+  //RndArr.sort(randOrd);
+  //RndArr.sort(randOrd);  // do it again just for kicks if desired
+// alert(RndArr.join(' '));	// for testing purposes
+  var i = 0;
+  for(var m=0;m<2;m++) {
+    for(var n=0;n<5;n++) {
+	  var pix = 'pic'+RndArr[i];  // alert(pix);
+	  	  if (pix == 'pic33') { piece[m][n] = 'blank.png'; }
+	                     else { piece[m][n] = pix+'.png'; }
+      document.getElementById(pix).src="_images/"+piece[m][n];
+      document.getElementById(pix).alt=piece[m][n];
+      i++;
+    }
+  }
+  swop();
+}
+    
+function HoverMouse(id)
+    {
+        document.getElementById(id).style.width ="140px";
+        document.getElementById(id).style.height ="140px";
+        document.getElementById(id).style.WebkitTransition = "all 1s";
+        document.getElementById(id).style.transition = "all 1s"; 
+        document.getElementById(id).style.opacity = 0.3;
+        document.getElementById(id).style.opacity = 0.3;
+    }
+function UnHoverMouse(id)
+    {
+        document.getElementById(id).style.opacity = 1;
+        document.getElementById(id).style.width ="130px";
+        document.getElementById(id).style.height ="130px";
+    }
+</script>
+</head>
+
+<body onload="ReorderPuzzle()">
+<select id="country" name="country" onchange="RandomizePuzzle()" style="width: 120px;">
+            <option value="">Please Select</option> 
+            <option value="USA">USA</option>
+            <option value="Mexico">Mexico</option>
+            <option value="India">India</option>
+            <option value="Japan">Japan</option>
+            <option value="Canada">Canada</option>
+            <option value="China">China</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Australia">Australia</option>
+            <option value="Russia">Russia</option>
+            <option value="Germany">Germany</option>
+</select>
+    <br></br>
+
+     
+<div id="game" class="sample">
+  <div class="container">
+    <img src="" id="pic00" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="check(this.id);" alt="" border"0">
+    <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+  </div>
+  <div class="container">
+    <img src="" id="pic01" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="check(this.id);" alt="" border"0">
+    <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+  </div>
+    <div class="container">
+    <img src="" id="pic02" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="check(this.id);" alt="" border"0">
+    <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+  </div>
+ <div class="container">
+    <img src="" id="pic03" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="check(this.id);" alt="" border"0">
+    <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+  </div>
+    <div class="container">
+    <img src="" id="pic04" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="check(this.id);" alt="" border"0">
+    <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+  </div>
+     <div class="container">
+    <img src="" id="pic10" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="check(this.id);" alt="" border"0">
+    <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+  </div>
+     <div class="container">
+    <img src="" id="pic11" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="check(this.id);" alt="" border"0">
+    <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+  </div>
+     <div class="container">
+    <img src="" id="pic12" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="check(this.id);" alt="" border"0">
+    <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+  </div>
+     <div class="container">
+    <img src="" id="pic13" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="check(this.id);" alt="" border"0">
+	
+    <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+  </div>
+     <div class="container">
+    <img src="" id="pic14" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="check(this.id);" alt="" border"0">
+    <div class="middle">
+    <div class="text">John Doe</div>
+  </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+   "Novels": [
+      {
+         "name": "The Wild Robot Escapes",
+         "imgPath": "Robot.jpg",
+         "review": "good"
+      },
+      {
+         "name": "Quantum Physics for Babies (Baby University)",
+         "imgPath": "qp.jpg",
+         "review": "good"
+      },
+      {
+         "name": "Number the Stars",
+         "imgPath": "numberthestar.jpg",
+         "review": "good"
+      }
+  ]
+}

@@ -1,0 +1,31 @@
+{"name":"bubble", "children": [
+{"name":"Juan Carlos Ferrero",
+"children":[
+    {"name": "Avg FirstServe:58%","note":"Juan Carlos Ferrero's FirstServe in his semi finals is 58%.His Avg First Serve of 6 matches is 61%"},
+    {"name": "Ace: 6","note":"Juan Carlos Ferrero's Ace in his semi finals is 6. His Average Ace of 6 matches is 9"},
+    {"name": "Return: 28%","note":"Juan Carlos Ferrero's Return % in his semi finals is 28%. His Avg Return % of 6 matches is 44%"},
+    {"name": "Error: 19","note":"Juan Carlos Ferrero's Error in semi finals is 19. His Average Error count is 32"}
+]},
+{"name": "Andre Agassi",
+"children":[
+    {"name":"Avg FirstServe:59%","note":" Andre Agassi's First Serve in his semi finals is 59%. His Average First Serve of 6 matches is 61% "},
+    {"name":"Ace: 10","note":"Andre Agassi's Ace in his semi finals is 10. His Average Ace of 6 matches is 9"},
+    {"name":"Return: 32%","note":"Andre Agassi's Return % in his semi finals is 32%. His Average Return % of 6 matches is 44%"},
+    {"name":"Error:33","note":"Andre Agassi's Error in semi finals is 33. His Average Error count is 32."}
+]},
+{"name":"Marat Safin",
+"children":[
+    {"name":"Avg FirstServe:55%","note":" Marat Safin's First Serve in his semi finals is 55%. His Average First Serve of 6 matches is 61% "},
+    {"name":"Ace:33","note":"Marat Safin's Ace in his semi finals is 33. His Average First ace of 6 matches is 9"},
+    {"name":"Return: 31%","note":"Marat Safin's Return % in his semi finals is 31%. His Average Return % of 6 matches is 44%"},
+    {"name":"Error:60","note":"Marat Safin's Error in semi finals is 60. His Average Error count is 32"}
+
+]},
+{"name":"Roger Federer",
+"children":[
+    {"name":"Avg FirstServe:72%","note":" Roger Federer's First Serve in his semi finals is 72%. His Average First Serve of 6 matches is 61% "},
+    {"name":"Ace: 11","note":"Roger Federer's Ace in his semi finals is 11. His Average Ace of 6 matches is 9"},
+    {"name":"Return: 45%","note":"Roger Federer's Return % in his semi finals is 45%. His Average Return % of 6 matches is 44%"},
+    {"name":"Error:28","note":"Roger Federer's Error in semi finals is 28. His Average Error count is 32"}
+]}
+]}  

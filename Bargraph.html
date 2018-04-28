@@ -1,0 +1,1244 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+path {  stroke: #fff; }
+path:hover {  opacity:0.9; }
+rect:hover {  fill:blue; }
+.axis {  font: 10px sans-serif; }
+.legend tr{    border-bottom:1px solid grey; }
+.legend tr:first-child{    border-top:1px solid grey; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {  display: none; }
+.legend{
+    margin-bottom:76px;
+    display:inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+.legendFreq, .legendPerc{
+    align:right;
+    width:50px;
+}
+  .Tab-Content {
+     float: right;
+    padding: 0px 12px;
+   
+    width: 90%;
+    border-left: none;
+       
+    align-content: center;
+    margin: auto;
+top:50px;
+
+}
+ .Tab {
+    float: left;
+    background-color: #f1f1f1;
+    width: 6%;
+    height: 100%;
+    position:static;
+      z-index: 10;
+     top:50px;
+}
+    .Tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 12px 8px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+    .flag{
+        width: 60px;
+        height:40px;
+        
+    }
+    .flag:hover{
+        transform: scale(1.3);
+    }
+    
+    #game img {
+	   width:110px;
+	   height:110px;
+	   padding: 0px 0px 0px 0px;
+	   margin: 0px 0px 0px 0px;
+/*	   border:1px solid red; */
+	   font-size:3em;
+    }
+div.sample
+    {
+        transition: "all 2s";
+                
+    }
+   
+div.container {
+      display:inline-block;
+    }
+
+.middle {
+  transition: .10s ease;
+  opacity: 0;
+  position: relative;
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  padding: 7px 13px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    overflow: auto;
+}
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+ #back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: #DDD;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+#back2Top:hover {
+    background-color: #DDF;
+    color: #000;
+}   
+    * {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 32%;
+    margin-top: 20px;
+    margin-right: 1px;
+    height: 300px; /* Should be removed. Only for demonstration */
+   
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+}
+    .columnhelpful {
+    float: left;
+    padding: 10px;
+    height: 50px; /* Should be removed. Only for demonstration */
+    padding: 10px;
+    background: orange;
+    clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+    font-family: "font_condensed";
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.1em;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ribbon {
+  position: relative;
+  right: 0px; top: 0px;
+  z-index: 1;
+  overflow: hidden;
+  width: 120px; height: 120px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; right: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 1px solid #79A70A;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid #79A70A;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 1px solid transparent;
+  border-right: 1px solid #79A70A;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid #79A70A;
+}
+
+
+h4
+{
+	position: relative;
+	width: 12%;
+    font-size: 16px;
+	font-weight: bold;
+	padding: 6px 20px 6px 20px;
+	margin: 30px 10px 10px 20px;
+	color: antiquewhite;
+	background-color: orange;
+	text-shadow: 0px 1px 2px orange;
+	-webkit-box-shadow: 0px 2px 4px orange;
+	-moz-box-shadow: 0px 2px 4px orange;
+	box-shadow: 0px 2px 4px orange;
+}
+h4:after
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: brown brown transparent transparent;
+}
+h4:before
+{
+	content: ' ';
+	position: absolute;
+	width: 30px;
+	height: 0;
+	left: -30px;
+	top: 12px;
+	border-width: 15px 10px;
+	border-style: solid;
+	border-color: orange orange orange transparent;
+}
+    
+    //user rating css
+    
+    .heading {
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+.fa {
+    font-size: 25px;
+}
+
+.checked {
+    color: orange;
+}
+    
+    .unchecked {
+    color: black;
+}
+
+/* Three column layout */
+.side {
+    float: left;
+    width: 15%;
+    margin-top:10px;
+}
+
+.middlebar {
+    margin-top:10px;
+    float: left;
+    width: 70%;
+}
+
+/* Place text to the right */
+.right {
+    text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The bar container */
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 30%;height: 18px; background-color: #006600;}
+.bar-4 {width: 30%; height: 18px; background-color: #4CAF50;}
+.bar-3 {width: 10%; height: 18px; background-color: #ffcc00;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+    .side, .middlebar {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
+}
+
+</style>
+<head><script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="India.json"></script></head>
+<body onload="ReorderPuzzle()">
+    <p style="text-align:center;color:darkred; " onclick="refresh()" id="Heading"><img src=amazonbooks.PNG></p>
+    <p style="text-align:center;color:goldenrod; font-size: 20px;">Get to know it... Before you buy it...</p>
+    <h4>Select a country</h4>
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      <div style="text-align: center;" class="columnhelpful" id="Title"></div>
+      <div class="row">
+  <div class="column" style="background-color:white;" id="column1">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+  </div>
+
+  <div class="column" style="background-color:white;">
+    <h2></h2>
+    <p></p>
+      <div style="width:300px;">
+      <span class="heading">User Rating</span>
+<i class="fa fa-star " id="5st"></i>
+<i class="fa fa-star " id="4st"></i>
+<i class="fa fa-star " id="3st"></i>
+<i class="fa fa-star " id="2st"></i>
+<i class="fa fa-star " id="1st"></i>
+<p id="RatingTitle"></p>
+<hr style="border:3px solid orange">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middlebar">
+    <div class="bar-container">
+      <div class="bar-5" id="5star" ></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div id="5starValue">150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middlebar">
+    <div class="bar-container">
+      <div class="bar-4"  id="4star"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div id="4starValue">63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middlebar">
+    <div class="bar-container">
+      <div class="bar-3" id="3star"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div id="3starValue">15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middlebar">
+    <div class="bar-container">
+      <div class="bar-2" id="2star"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div id="2starValue">6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middlebar">
+    <div class="bar-container">
+      <div class="bar-1" id="1star"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div id="1starValue">20</div>
+  </div>
+</div>
+  </div>
+      </div>
+          
+  <div class="column" style="background-color:white; overflow: auto" id="column3">
+    <h2>Column 3</h2>
+    <p>Some text..</p>
+  </div>
+          
+          
+
+          </div>
+    <p id="reviewww"></p>
+  </div>
+
+</div>
+    <div class='Tab'>
+        <button class="tablinks" onclick="report(this.value)" id="defaultOpen" value="India" ><img class='flag' src="flags/India.PNG" title="India"></button>
+        <button class="tablinks" onclick="report(this.value)" value="USA"><img class='flag' src="flags/USA.PNG" title="USA"></button>
+        <button class="tablinks" onclick="report(this.value)" value="China"><img class='flag' src="flags/China.png" title="China"></button> 
+        <button class="tablinks" onclick="report(this.value)" value="Australia"><img class='flag' src="flags/Australia.png" title="Australia"></button>
+         <button class="tablinks" onclick="report(this.value)" value="Brazil"><img class='flag' src="flags/Brazil.png" title="Brazil"></button>
+         <button class="tablinks" onclick="report(this.value)" value="Canada"><img class='flag' src="flags/Canada.png" title="Canada"></button>
+         <button class="tablinks" onclick="report(this.value)" value="France"><img class='flag' src="flags/France.png" title="France"></button>
+         <button class="tablinks" onclick="report(this.value)" value="Germany"><img class='flag' src="flags/Germany.png" title="Germany"></button>
+         
+         <button class="tablinks" onclick="report(this.value)" value="Japan"><img class='flag' src="flags/Japan.png" title="Japan"></button>
+         <button class="tablinks" onclick="report(this.value)" value="UK"><img class='flag' src="flags/UK.png" title="UK"></button>
+        
+    </div>
+    <div class='Tab-Content'>
+         
+<div id="game" class="sample">
+  <div class="container">
+    <div class="ribbon"><span>POPULAR</span>
+    <img src="" id="pic00" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" onclick="novels();" alt="" border"0"/>
+    </div>
+    <div class="middle">
+    <div class="text" id="pic00t"></div>
+    </div>
+  </div>
+  <div class="container">
+    <img src="" id="pic01" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" alt="" border"0" style="opacity: 0.3">
+    <div class="middle">
+    <div class="text" id="pic01t">21%</div>
+  </div>
+  </div>
+    <div class="container">
+    <img src="" id="pic02" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" alt="" border"0" style="opacity: 0.3">
+    <div class="middle">
+    <div class="text" id="pic02t">15%</div>
+  </div>
+  </div>
+ <div class="container">
+    <img src="" id="pic03" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" alt="" border"0" style="opacity: 0.3">
+    <div class="middle">
+    <div class="text" id="pic03t">7%</div>
+  </div>
+  </div>
+    <div class="container">
+    <img src="" id="pic04" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" alt="" border"0" style="opacity: 0.3">
+    <div class="middle">
+    <div class="text" id="pic04t">5%</div>
+  </div>
+  </div>
+     <div class="container">
+    <img src="" id="pic10" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" alt="" border"0" style="opacity: 0.3">
+    <div class="middle">
+    <div class="text" id="pic10t">4%</div>
+  </div>
+  </div>
+     <div class="container">
+    <img src="" id="pic11" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" alt="" border"0" style="opacity: 0.3">
+    <div class="middle">
+    <div class="text" id="pic11t">3%</div>
+  </div>
+  </div>
+     <div class="container">
+    <img src="" id="pic12" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" alt="" border"0" style="opacity: 0.3">
+    <div class="middle">
+    <div class="text" id="pic12t">2%</div>
+  </div>
+  </div>
+     <div class="container">
+    <img src="" id="pic13" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" alt="" border"0" style="opacity: 0.3">
+	
+    <div class="middle">
+    <div class="text" id="pic13t">1%</div>
+  </div>
+  </div>
+     <div class="container">
+    <img src="" id="pic14" onmouseover="HoverMouse(this.id)" onmouseout="UnHoverMouse(this.id)" alt="" border"0" style="opacity: 0.3">
+    <div class="middle">
+    <div class="text" id="pic14t">1%</div>
+  </div>
+  </div>
+</div>
+   <!--</div>-->
+  <!--  <div id='country'>
+    <label style="font-weight: bold; color:#003366; font-family: serif;font-size: 25px;"> Select A Country &nbsp;</label>
+     <select id="country" name="country" onchange="report(this.value)" style="width: 120px;height: 30px; background-color:#99ccff; border-style: solid; border-width:thin; border-color: black">
+            <option value="">Please Select</option> 
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+        </select>
+    </div>
+    <div id='Demo'></div>-->
+    
+<div id='dashboard'>
+</div>
+<div id='dvProdList'>
+</div>
+</div>
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+</body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+    
+    var piece, x, y;
+function dashboard(id, fData){
+    
+    var barColor = 'steelblue';
+    function segColor(c){ return {one:"#f44336", two:"#ff9800",three:"#ffcc00",four:"#4CAF50",five:"#006600"}[c]; }
+    
+    // compute total for each state.
+    fData.forEach(function(d){d.total=d.freq.one+d.freq.two+d.freq.three+d.freq.four+d.freq.five;});
+    
+    // function to handle histogram.
+    function histoGram(fD){
+        var hG={},    hGDim = {t: 60, r: 0, b: 30, l: 0};
+        hGDim.w = 550 - hGDim.l - hGDim.r, 
+        hGDim.h = 400 - hGDim.t - hGDim.b;
+            
+        //create svg for histogram.
+       d3.selectAll("svg").remove();
+        var hGsvg = d3.select(id).append("svg")
+            .attr("width", hGDim.w + hGDim.l + hGDim.r)
+            .attr("height", hGDim.h + hGDim.t + hGDim.b).append("g")
+            .attr("transform", "translate(" + hGDim.l + "," + hGDim.t + ")");
+
+        // create function for x-axis mapping.
+        var x = d3.scale.ordinal().rangeRoundBands([0, hGDim.w], 0.1)
+                .domain(fD.map(function(d) { return d[0]; }));
+
+        // Add x-axis to the histogram svg.
+        hGsvg.append("g").attr("class", "x axis")
+            .attr("transform", "translate(0," + hGDim.h + ")")
+            .call(d3.svg.axis().scale(x).orient("bottom"));
+        
+        // Create function for y-axis map.
+        var y = d3.scale.linear().range([hGDim.h, 0])
+                .domain([0, d3.max(fD, function(d) { return d[1]; })]);
+        
+
+        // Create bars for histogram to contain rectangles and freq labels.
+        var bars = hGsvg.selectAll(".bar").data(fD).enter()
+                .append("g").attr("class", "bar");
+        
+        //create the rectangles.
+        bars.append("rect")
+            .attr("x", function(d) { return x(d[0]); })
+            .attr("y", function(d) { return y(d[1]); })
+            .attr("width", x.rangeBand())
+            .attr("height", function(d) { return hGDim.h - y(d[1]); })
+            .attr('fill',barColor)
+            .on("mouseover",mouseover)// mouseover is defined below.
+            .on("mouseout",mouseout);// mouseout is defined below.
+            
+        //Create the frequency labels above the rectangles.
+        bars.append("text").text(function(d){ return d3.format(",")(d[1])})
+            .attr("x", function(d) { return x(d[0])+x.rangeBand()/2; })
+            .attr("y", function(d) { return y(d[1])-5; })
+            .attr("text-anchor", "middle");
+        
+        function mouseover(d){  // utility function to be called on mouseover.
+            // filter for selected state.
+            var st = fData.filter(function(s){ return s.State == d[0];})[0],
+                nD = d3.keys(st.freq).map(function(s){ return {type:s, freq:st.freq[s]};});
+               
+            // call update functions of pie-chart and legend.    
+            pC.update(nD);
+            leg.update(nD);
+        }
+        
+        function mouseout(d){    // utility function to be called on mouseout.
+            // reset the pie-chart and legend.    
+            pC.update(tF);
+            leg.update(tF);
+        }
+        
+        // create function to update the bars. This will be used by pie-chart.
+        hG.update = function(nD, color){
+            // update the domain of the y-axis map to reflect change in frequencies.
+            y.domain([0, d3.max(nD, function(d) { return d[1]; })]);
+            
+            // Attach the new data to the bars.
+            var bars = hGsvg.selectAll(".bar").data(nD);
+            
+            // transition the height and color of rectangles.
+            bars.select("rect").transition().duration(500)
+                .attr("y", function(d) {return y(d[1]); })
+                .attr("height", function(d) { return hGDim.h - y(d[1]); })
+                .attr("fill", color);
+
+            // transition the frequency labels location and change value.
+            bars.select("text").transition().duration(500)
+                .text(function(d){ return d3.format(",")(d[1])})
+                .attr("y", function(d) {return y(d[1])-5; });            
+        }        
+        return hG;
+    }
+    
+    // function to handle pieChart.
+    function pieChart(pD){
+        var pC ={},    pieDim ={w:250, h: 250};
+        pieDim.r = Math.min(pieDim.w, pieDim.h) / 2;
+                
+        // create svg for pie chart.
+        var piesvg = d3.select(id).append("svg")
+            .attr("width", pieDim.w).attr("height", pieDim.h).append("g")
+            .attr("transform", "translate("+pieDim.w/2+","+pieDim.h/2+")");
+        
+        // create function to draw the arcs of the pie slices.
+        var arc = d3.svg.arc().outerRadius(pieDim.r - 10).innerRadius(0);
+
+        // create a function to compute the pie slice angles.
+        var pie = d3.layout.pie().sort(null).value(function(d) { return d.freq; });
+
+        // Draw the pie slices.
+        piesvg.selectAll("path").data(pie(pD)).enter().append("path").attr("d", arc)
+            .each(function(d) { this._current = d; })
+            .style("fill", function(d) { return segColor(d.data.type); })
+            .on("mouseover",mouseover).on("mouseout",mouseout);
+
+        // create function to update pie-chart. This will be used by histogram.
+        pC.update = function(nD){
+            piesvg.selectAll("path").data(pie(nD)).transition().duration(500)
+                .attrTween("d", arcTween);
+        }        
+        // Utility function to be called on mouseover a pie slice.
+        function mouseover(d){
+            // call the update function of histogram with new data.
+            hG.update(fData.map(function(v){ 
+                return [v.State,v.freq[d.data.type]];}),segColor(d.data.type));
+        }
+        //Utility function to be called on mouseout a pie slice.
+        function mouseout(d){
+            // call the update function of histogram with all data.
+            hG.update(fData.map(function(v){
+                return [v.State,v.total];}), barColor);
+        }
+        // Animating the pie-slice requiring a custom function which specifies
+        // how the intermediate paths should be drawn.
+        function arcTween(a) {
+            var i = d3.interpolate(this._current, a);
+            this._current = i(0);
+            return function(t) { return arc(i(t));    };
+        }    
+        return pC;
+    }
+    
+    // function to handle legend.
+    function legend(lD){
+        var leg = {};
+        // create table for legend.
+       d3.selectAll("tr").remove();
+        var legend = d3.select(id).append("table").attr('class','legend');
+        
+        // create one row per segment.
+        var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr");
+            
+        // create the first column for each segment.
+        tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
+            .attr("width", '16').attr("height", '16')
+			.attr("fill",function(d){ return segColor(d.type); });
+            
+        // create the second column for each segment.
+        tr.append("td").text(function(d){ return d.type;});
+
+        // create the third column for each segment.
+        tr.append("td").attr("class",'legendFreq')
+            .text(function(d){ return d3.format(",")(d.freq);});
+
+        // create the fourth column for each segment.
+        tr.append("td").attr("class",'legendPerc')
+            .text(function(d){ return getLegend(d,lD);});
+
+        // Utility function to be used to update the legend.
+        leg.update = function(nD){
+            // update the data attached to the row elements.
+            var l = legend.select("tbody").selectAll("tr").data(nD);
+
+            // update the frequencies.
+            l.select(".legendFreq").text(function(d){ return d3.format(",")(d.freq);});
+
+            // update the percentage column.
+            l.select(".legendPerc").text(function(d){ return getLegend(d,nD);});        
+        }
+        
+        function getLegend(d,aD){ // Utility function to compute percentage.
+            return d3.format("%")(d.freq/d3.sum(aD.map(function(v){ return v.freq; })));
+        }
+        
+        return leg;
+       
+    }
+    
+    // calculate total frequency by segment for all state.
+    var tF = ['one','two','three','four','five'].map(function(d){ 
+        return {type:d, freq: d3.sum(fData.map(function(t){ return t.freq[d];}))}; 
+    });    
+    
+    // calculate total frequency by state for all segment.
+    var sF = fData.map(function(d){return [d.State,d.total];});
+
+    var hG = histoGram(sF), // create the histogram.
+        pC = pieChart(tF), // create the pie-chart.
+        leg= legend(tF);  // create the legend.
+}
+    
+    
+
+function ReorderPuzzle() {
+  piece=new Array();
+
+  piece[piece.length]=new Array("pic00.png","pic01.png","pic02.png","pic03.png","pic04.png");
+  piece[piece.length]=new Array("pic10.png","pic11.png","pic12.png","pic13.png","pic14.png");
+  swop();
+}
+</script>
+
+<script>
+var India=[
+{State:'Arts',freq:{one:100,two:200,three:300,four:240,five:425}}
+,{State:'Biographies',freq:{one:10,two:250,three:310,four:140,five:75}}
+,{State:'Business',freq:{one:77,two:120,three:200,four:640,five:125}}
+,{State:'Children',freq:{one:44,two:22,three:450,four:240,five:125}}
+,{State:'cookery',freq:{one:100,two:200,three:300,four:240,five:325}}
+,{State:'History',freq:{one:230,two:100,three:150,four:180,five:125}}
+,{State:'Literature',freq:{one:10,two:120,three:300,four:240,five:825}}
+,{State:'Mystery',freq:{one:120,two:200,three:140,four:240,five:125}}
+,{State:'Romance',freq:{one:180,two:210,three:120,four:140,five:325}}
+,{State:'Scifi',freq:{one:100,two:130,three:200,four:340,five:425}}
+];
+    
+    var USA=[
+{State:'Arts',freq:{one:221,two:100,three:200,four:240,five:625}}
+,{State:'Biographies',freq:{one:10,two:250,three:310,four:140,five:75}}
+,{State:'Business',freq:{one:77,two:120,three:200,four:640,five:125}}
+,{State:'Children',freq:{one:44,two:22,three:450,four:240,five:125}}
+,{State:'Cookery',freq:{one:100,two:200,three:300,four:240,five:325}}
+,{State:'History',freq:{one:230,two:100,three:150,four:180,five:125}}
+,{State:'Literature',freq:{one:100,two:200,three:300,four:240,five:325}}
+,{State:'Mystery',freq:{one:100,two:200,three:300,four:240,five:125}}
+,{State:'Romance',freq:{one:100,two:200,three:300,four:140,five:625}}
+,{State:'Scifi',freq:{one:100,two:200,three:200,four:340,five:625}}
+];
+    var UK=[
+{State:'Arts',freq:{one:221,two:70,three:50,four:240,five:325}}
+,{State:'Biographies',freq:{one:10,two:250,three:310,four:140,five:75}}
+,{State:'Business',freq:{one:77,two:120,three:200,four:640,five:125}}
+,{State:'Children',freq:{one:44,two:22,three:450,four:240,five:125}}
+,{State:'Cookery',freq:{one:100,two:200,three:300,four:240,five:325}}
+,{State:'History',freq:{one:230,two:100,three:150,four:180,five:125}}
+,{State:'Literature',freq:{one:70,two:210,three:300,four:240,five:325}}
+,{State:'Mystery',freq:{one:150,two:130,three:310,four:240,five:125}}
+,{State:'Romance',freq:{one:120,two:200,three:220,four:140,five:525}}
+,{State:'Scifi',freq:{one:100,two:220,three:130,four:340,five:723}}
+];
+    
+    var Germany=[
+{State:'Arts',freq:{one:221,two:100,three:50,four:240,five:625}}
+,{State:'Biographies',freq:{one:10,two:250,three:310,four:140,five:75}}
+,{State:'Business',freq:{one:77,two:120,three:200,four:640,five:125}}
+,{State:'Children',freq:{one:44,two:22,three:450,four:240,five:125}}
+,{State:'Cookery',freq:{one:100,two:200,three:300,four:240,five:325}}
+,{State:'History',freq:{one:230,two:100,three:150,four:180,five:125}}
+,{State:'Literature',freq:{one:70,two:150,three:300,four:240,five:325}}
+,{State:'Mystery',freq:{one:120,two:210,three:310,four:240,five:125}}
+,{State:'Romance',freq:{one:35,two:190,three:230,four:140,five:713}}
+,{State:'Scifi',freq:{one:100,two:150,three:200,four:140,five:325}}
+];
+    
+    var Brazil=[
+{State:'Arts',freq:{one:221,two:100,three:50,four:240,five:225}}
+,{State:'Biographies',freq:{one:10,two:250,three:310,four:140,five:75}}
+,{State:'Business',freq:{one:77,two:120,three:200,four:340,five:125}}
+,{State:'Child8ren',freq:{one:44,two:220,three:450,four:240,five:685}}
+,{State:'Cookery',freq:{one:100,two:200,three:150,four:240,five:325}}
+,{State:'History',freq:{one:230,two:100,three:150,four:180,five:125}}
+,{State:'Literature',freq:{one:123,two:200,three:150,four:240,five:325}}
+,{State:'Mystery',freq:{one:176,two:256,three:312,four:240,five:125}}
+,{State:'Romance',freq:{one:67,two:170,three:309,four:140,five:213}}
+,{State:'Scifi',freq:{one:100,two:190,three:200,four:140,five:165}}
+];
+    
+    var France=[
+{State:'Arts',freq:{one:21,two:100,three:200,four:240,five:575}}
+,{State:'Biographies',freq:{one:10,two:250,three:310,four:140,five:75}}
+,{State:'Business',freq:{one:77,two:120,three:200,four:140,five:125}}
+,{State:'Children',freq:{one:44,two:22,three:450,four:240,five:125}}
+,{State:'Cookery',freq:{one:100,two:200,three:100,four:240,five:325}}
+,{State:'History',freq:{one:230,two:100,three:150,four:180,five:125}}
+,{State:'Literature',freq:{one:123,two:200,three:150,four:240,five:125}}
+,{State:'Mystery',freq:{one:176,two:256,three:112,four:240,five:183}}
+,{State:'Romance',freq:{one:67,two:170,three:309,four:140,five:213}}
+,{State:'Scifi',freq:{one:100,two:190,three:200,four:140,five:165}}
+];
+    
+    var Australia=[
+{State:'Arts',freq:{one:121,two:100,three:50,four:240,five:225}}
+,{State:'Biographies',freq:{one:10,two:250,three:310,four:140,five:75}}
+,{State:'Business',freq:{one:77,two:120,three:200,four:340,five:125}}
+,{State:'Children',freq:{one:44,two:22,three:450,four:240,five:125}}
+,{State:'Cookery',freq:{one:100,two:200,three:150,four:240,five:325}}
+,{State:'History',freq:{one:230,two:100,three:150,four:180,five:125}}
+,{State:'Literature',freq:{one:123,two:200,three:150,four:240,five:325}}
+,{State:'Mystery',freq:{one:176,two:256,three:312,four:240,five:125}}
+,{State:'Romance',freq:{one:67,two:170,three:309,four:140,five:213}}
+,{State:'Scifi',freq:{one:100,two:190,three:200,four:140,five:565}}
+];
+    
+    var Japan=[
+{State:'Arts',freq:{one:221,two:100,three:50,four:240,five:225}}
+,{State:'Biographies',freq:{one:110,two:250,three:310,four:140,five:75}}
+,{State:'Business',freq:{one:77,two:120,three:200,four:340,five:425}}
+,{State:'Child8ren',freq:{one:44,two:220,three:250,four:240,five:185}}
+,{State:'Cookery',freq:{one:100,two:200,three:150,four:240,five:325}}
+,{State:'History',freq:{one:230,two:100,three:150,four:180,five:125}}
+,{State:'Literature',freq:{one:123,two:200,three:150,four:240,five:225}}
+,{State:'Mystery',freq:{one:176,two:256,three:112,four:240,five:125}}
+,{State:'Romance',freq:{one:67,two:170,three:209,four:140,five:213}}
+,{State:'Scifi',freq:{one:100,two:190,three:200,four:140,five:165}}
+];
+    
+    var China=[
+{State:'Arts',freq:{one:221,two:100,three:50,four:240,five:225}}
+,{State:'Biographies',freq:{one:110,two:250,three:310,four:140,five:75}}
+,{State:'Business',freq:{one:77,two:120,three:200,four:340,five:425}}
+,{State:'Child8ren',freq:{one:44,two:220,three:250,four:240,five:185}}
+,{State:'Cookery',freq:{one:100,two:200,three:150,four:240,five:325}}
+,{State:'History',freq:{one:230,two:100,three:150,four:180,five:125}}
+,{State:'Literature',freq:{one:123,two:200,three:150,four:240,five:225}}
+,{State:'Mystery',freq:{one:176,two:256,three:112,four:240,five:125}}
+,{State:'Romance',freq:{one:67,two:170,three:209,four:140,five:213}}
+,{State:'Scifi',freq:{one:100,two:190,three:200,four:140,five:165}}
+];
+    
+    var Canada=[
+{State:'Arts',freq:{one:221,two:100,three:200,four:240,five:125}}
+,{State:'Biographies',freq:{one:10,two:250,three:310,four:140,five:75}}
+,{State:'Business',freq:{one:77,two:120,three:200,four:640,five:125}}
+,{State:'Children',freq:{one:44,two:22,three:450,four:240,five:125}}
+,{State:'Cookery',freq:{one:100,two:200,three:300,four:240,five:325}}
+,{State:'History',freq:{one:230,two:100,three:150,four:180,five:125}}
+,{State:'Literature',freq:{one:123,two:200,three:150,four:240,five:325}}
+,{State:'Mystery',freq:{one:176,two:256,three:312,four:240,five:583}}
+,{State:'Romance',freq:{one:67,two:170,three:309,four:140,five:213}}
+,{State:'Scifi',freq:{one:100,two:190,three:200,four:140,five:165}}
+];
+
+var countryvalue = "";
+function report(country)
+    {
+        countryvalue = country + "_Novel";
+        if(country=='India')
+            fileName=India;
+        else if(country=='USA')
+            fileName=USA;
+        else if(country=='UK')
+            fileName=UK;
+        else if(country=='Germany')
+            fileName=Germany;
+        else if(country=='China')
+            fileName=China;
+        else if(country=='Brazil')
+            fileName=Brazil;
+        else if(country=='Japan')
+            fileName=Japan;
+        else if(country=='France')
+            fileName=France;
+        else if(country=='Canada')
+            fileName=Canada;
+        else 
+            fileName=Australia;
+        
+       // alert(fileName);
+      //  alert(2);
+        dashboard('#dashboard',fileName);
+      //  alert(3);        
+        $("#dvProdList").html("");
+     //   alert(4); 
+        RandomizePuzzle(country);
+            
+    }
+     
+    var jsonfile="";
+    function novels(){
+        //alert("hello"+value);
+        //alert("hit"+value);
+        //alert(countryvalue);
+        varjsonURL=countryvalue+".json";
+        //alert("varjsonURL"+varjsonURL);
+        jsonfile=countryvalue+".json";
+        //alert(jsonfile+"file");
+      //  alert(varjsonURL);
+         
+        $(document).ready(function () {
+         $('#dvProdList > img').remove();  
+        var jsonURL = varjsonURL;
+        $.getJSON(jsonURL, function (json)
+        {
+    
+        
+            var imgList= "";
+            
+            $.each(json.Novels, function () {
+           // imgList += '<tr><img src= "' + this.imgPath + '"></tr>';
+                
+           // <tr><img src="C:\Users\kandu\Documents\DV\Project\image\Business.PNG" id='Business' onclick="novels(this.id)"></tr>
+              //  var reviewx = this.review;
+            imgList+='<tr><img src="'+this.imgPath+'" id=\''+this.name+'\'onclick="rating(this.id)" " style="height:300px;width: 250px;padding:20px"></tr>';
+                
+        });
+            var finalList='<table>'+imgList+"</table>";
+           // alert(finalList);
+           
+        $('#dvProdList').append(finalList);
+        
+     });
+});
+        
+    }
+    var modal = document.getElementById('myModal');
+    function rating(name)
+    {
+        var jsonURL = jsonfile;
+        modal.style.display = "block";
+         $.getJSON(jsonURL, function (json)
+        {
+        $.each(json.Novels, function () {
+         //  alert("this.name "+this.name)
+          //  alert("name "+name);
+         // alert(this.FiveRating);
+           // alert(this.5starrating);
+            
+            if(this.name == name)
+                {
+                    
+                   // alert("this.review "+this.review);
+                   // document.getElementById("review").value=this.review;
+                   // document.getElementById('reviewww').innerHTML=this.review;
+      
+                     var temp;
+                    temp=this.FiveRating;
+                    var elem=document.getElementById('5star');
+                   elem.style.width=temp+"%";
+                    document.getElementById('5starValue').innerHTML=temp+"%";
+                    
+                    temp=this.FourRating;
+                    var elem=document.getElementById('4star');
+                   elem.style.width=temp+"%";
+                    document.getElementById('4starValue').innerHTML=temp+"%";
+                    
+                     temp=this.ThreeRating;
+                    var elem=document.getElementById('3star');
+                   elem.style.width=temp+"%";
+                    document.getElementById('3starValue').innerHTML=temp+"%";
+                    
+                     temp=this.TwoRating;
+                    var elem=document.getElementById('2star');
+                   elem.style.width=temp+"%";
+                    document.getElementById('2starValue').innerHTML=temp+"%";
+                    
+                     temp=this.OneRating;
+                    var elem=document.getElementById('1star');
+                   elem.style.width=temp+"%";
+                    document.getElementById('1starValue').innerHTML=temp+"%";
+
+                    
+                    document.getElementById('5st').classList.add('checked');
+                     document.getElementById('4st').classList.add('checked');
+                     document.getElementById('3st').classList.add('checked');
+                     document.getElementById('2st').classList.add('checked');
+                     document.getElementById('1st').classList.add('checked');
+                      
+                    
+                    
+                  if(this.OverAllRating>=4)
+                        {
+                           // alert(this.OverAllRating)
+                   
+                     document.getElementById('1st').classList.remove('checked');
+                        }
+                    else if(this.OverAllRating>=3 && this.OverAllRating<4)
+                        {
+                          //  alert(this.OverAllRating)
+                           document.getElementById('2st').classList.remove('checked');
+                            document.getElementById('1st').classList.remove('checked');
+                        }
+                    else if(this.OverAllRating>=2 && this.OverAllRating<3)
+                        { // alert(2)
+                          //  alert(this.OverAllRating)
+                           document.getElementById('3st').classList.remove('checked');
+                            document.getElementById('2st').classList.remove('checked');
+                            document.getElementById('1st').classList.remove('checked');
+                        }
+                    else
+                        {
+                           // alert(3)
+                          //  alert("entered");
+                       //     alert(this.OverAllRating)
+                            document.getElementById('4st').classList.remove('checked');
+                            document.getElementById('3st').classList.remove('checked');
+                            document.getElementById('2st').classList.remove('checked');
+                            document.getElementById('1st').classList.remove('checked');
+                        }
+                    text=this.OverAllRating+" Average Based on "+this.Reviews;
+                    document.getElementById('RatingTitle').innerHTML=text;
+                    
+                    ReviewImage='<img src="'+this.ReviewImage+'" style="height:250px;width: 400px">'
+                    document.getElementById('column1').innerHTML=ReviewImage;
+                    
+                    helpFulReview='<p style="display:inline; word-wrap: break-word; padding-right:220px; font-size:20px; font-weight:bold;"> HelpFul Review </p><i class="fa fa-thumbs-o-up" style="color:indigo;font-size:42px"></i><p style=" font-size:20px; font-weight:bold; display:inline; word-wrap: break-word;">'+this.count+'</p><p>'+this.Helpfull+'</p>';
+                    document.getElementById('column3').innerHTML=helpFulReview;
+                    
+                    TitleName='<h3>'+this.name+'</h3>';
+                    document.getElementById('Title').innerHTML=TitleName;
+                
+                    
+                        
+                    
+                    
+                }});
+        <!--alert(name);-->
+        });
+         
+    }
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+
+ function swop() {
+    
+  for(var m=0;m<2;m++) {
+    for(var n=0;n<5;n++) {
+      document.getElementById("pic"+m+n).src="_images/"+piece[m][n];		// Swops all the image sources for the ones in the array.
+      document.getElementById("pic"+m+n).alt=piece[m][n];
+      
+    }
+  }
+}
+
+        function refresh()
+        {
+            $('#Heading').click(function() {
+            location.reload();
+});
+        }
+//function randOrd() { return (Math.round(Math.random())-0.5); }
+
+function RandomizePuzzle(country) {
+  //  alert(country);
+    if(country == "USA")
+        {
+        var RndArr = ['14','00','01','02','03','10','11','12','13','04'];
+            
+            document.getElementById('pic00t').innerHTML="34%";
+        }
+    if(country == "UK")
+        {
+        var RndArr = ['14','10','11','12','13','04','00','01','02','03'];
+             document.getElementById('pic00t').innerHTML="29%";
+        }
+     if(country == "India")
+        {
+        var RndArr = ['11','03','04','10','02','12','13','14','00','01'];              
+             document.getElementById('pic00t').innerHTML="42%";
+        }
+    if(country == "Japan")
+        {
+        var RndArr = ['02','13','14','00','01','12','10','11','03','04'];
+             document.getElementById('pic00t').innerHTML="31%";
+        }
+    if(country == "Canada")
+        {
+        var RndArr = ['12','14','00','10','11','13','01','02','03','04'];
+             document.getElementById('pic00t').innerHTML="39%";
+        }
+    if(country == "Brazil")
+        {
+        var RndArr = ['03','11','12','01','02','13','14','00','10','04'];
+             document.getElementById('pic00t').innerHTML="28%";
+        }
+    if(country == "China")
+        {
+        var RndArr = ['02','01','10','03','04','11','12','13','14','00'];
+             document.getElementById('pic00t').innerHTML="27%";
+        }
+    if(country == "Australia")
+        {
+        var RndArr = ['14','01','02','03','10','11','12','13','00','04'];
+             document.getElementById('pic00t').innerHTML="40%";
+        }
+    if(country == "France")
+        {
+        var RndArr = ['00','14','10','01','02','03','04','11','12','13'];
+             document.getElementById('pic00t').innerHTML="23%";
+        }
+    if(country == "Germany")
+        {
+        var RndArr = ['13','14','00','02','03','04','10','11','12','01'];
+             document.getElementById('pic00t').innerHTML="33%";
+        }
+
+  //RndArr.sort(randOrd);
+  //RndArr.sort(randOrd);  // do it again just for kicks if desired
+// alert(RndArr.join(' '));	// for testing purposes
+  var i = 0;
+  for(var m=0;m<2;m++) {
+    for(var n=0;n<5;n++) {
+	  var pix = 'pic'+RndArr[i];  // alert(pix);
+	  	  if (pix == 'pic33') { piece[m][n] = 'blank.png'; }
+	                     else { piece[m][n] = pix+'.png'; }
+      document.getElementById(pix).src="_images/"+piece[m][n];
+      document.getElementById(pix).alt=piece[m][n];
+      i++;
+    }
+  }
+  swop();
+}
+    
+function HoverMouse(id)
+    {
+        document.getElementById(id).style.width ="120px";
+        document.getElementById(id).style.height ="120px";
+        document.getElementById(id).style.WebkitTransition = "all 1s";
+        document.getElementById(id).style.transition = "all 1s"; 
+        document.getElementById(id).style.opacity = 0.3;
+        document.getElementById(id).style.opacity = 0.3;
+    }
+function UnHoverMouse(id)
+    {
+        document.getElementById(id).style.opacity = 1;
+        document.getElementById(id).style.width ="110px";
+        document.getElementById(id).style.height ="110px";
+        if(id != "pic00")
+            {
+                document.getElementById(id).style.opacity = 0.3;
+                document.getElementById(id).style.opacity = 0.3;
+            }
+    }
+
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+
+</script>

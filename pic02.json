@@ -1,0 +1,19 @@
+{
+   "Novels": [
+      {
+         "name": "Bitcoin for Dummies",
+         "imgPath": "Bitcoin.jpg",
+         "review": "good"
+      },
+      {
+         "name": "On Grand Strategy",
+         "imgPath": "ongrand.jpg",
+         "review": "good"
+      },
+      {
+         "name": "This is How We Hewitt",
+         "imgPath": "this.jpg",
+         "review": "good"
+      }
+  ]
+}

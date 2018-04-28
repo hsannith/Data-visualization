@@ -1,0 +1,19 @@
+{
+   "Novels": [
+      {
+         "name": "Tiger Woods",
+         "imgPath": "Tiger Woods.jpg",
+         "review": "good"
+      },
+      {
+         "name": "Educated : A Memoir",
+         "imgPath": "Educated.jpg",
+         "review": "good"
+      },
+      {
+         "name": "Unmasked:A Memoir",
+         "imgPath": "unmasked.jpg",
+         "review": "good"
+      }
+  ]
+}
